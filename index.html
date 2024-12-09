@@ -2,16 +2,110 @@
 <html>
 <head>
 <meta charset='utf-8'>
-<title>HTMLtest</title>
-</head>
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
+<title>自己紹介</title>
 
+<style>
+
+body{
+	font-family:Arial, sans-serif;
+	background-color: #f0f8ff;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+header{
+        background-color: #4CAF50;
+	color: white;
+	text-align: center;
+	padding: 20;
+}
+
+
+        .content {
+            padding: 20px;
+        }
+
+        .intro {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .info li {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .info li strong {
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World!!!!!!!<h1>
-<h2>have a nice day<h2>
-<h3>123456789<h3>
-<?php
-      $text="HTMLaction";
-      echo"<p>$text</p>";
-?>
+
+    <header>
+        <h1>自己紹介</h1>
+    </header>
+
+    <div class="content">
+        <p class="intro">こんにちは！私の名前は山田太郎です。以下は私に関する情報です。</p>
+
+        <ul class="info">
+            <li><strong>名前:</strong> 山田 太郎</li>
+            <li><strong>年齢:</strong> 30歳</li>
+            <li><strong>趣味:</strong> プログラミング、読書、音楽鑑賞</li>
+            <li><strong>職業:</strong> ソフトウェアエンジニア</li>
+            <li><strong>好きな食べ物:</strong> 寿司</li>
+        </ul>
+
+        <button id="showMoreBtn">もっと見る</button>
+
+        <div id="moreInfo" class="hidden">
+            <h2>その他の情報</h2>
+            <ul class="info">
+                <li><strong>出身地:</strong> 東京</li>
+                <li><strong>好きな映画:</strong> インセプション</li>
+                <li><strong>好きなスポーツ:</strong> サッカー</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript部分
+        document.getElementById("showMoreBtn").addEventListener("click", function() {
+            var moreInfoDiv = document.getElementById("moreInfo");
+            if (moreInfoDiv.classList.contains("hidden")) {
+                moreInfoDiv.classList.remove("hidden");
+                this.textContent = "閉じる";
+            } else {
+                moreInfoDiv.classList.add("hidden");
+                this.textContent = "もっと見る";
+            }
+        });
+    </script>
+
 </body>
 </html>
