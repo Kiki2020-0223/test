@@ -1,1 +1,25 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Image Loading</title>
+</head>
+<body>
+  <h1>Image from URL</h1>
+  <div id="image-container"></div>
+
+  <script>
+    // 画像のURL
+    const imageUrl = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHKqbZXAU8E8XC8WQHKn5KlZfoKWlXqvap-SFVlTL2yzAY9DX5KpvAVTF2XPHcTt3Mj3t6s3kQNI2EPinfJak5LSViIWbd-d2ETd8tQXaWI8GPmWnsU1hvmaXeJKwuj1p4HfQnmD36Ch3k/s1600/nigaoe_spinoza.png';
+    
+    // 画像を作成して表示
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = 'Example Image';
+    
+    // DOMに画像を追加
+    document.getElementById('image-container').appendChild(img);
+  </script>
+</body>
+</html>
